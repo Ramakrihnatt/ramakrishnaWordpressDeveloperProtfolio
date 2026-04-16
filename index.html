@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramakrishna Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="container">
+    <h2 class="logo">Ramakrishna</h2>
+    <ul id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <button onclick="toggleDarkMode()" class="dark-btn">🌙</button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero container">
+
+  <div class="hero-img">
+    <img src="RAM.png" alt="Ramakrishna">
+  </div>
+
+  <div class="hero-text">
+    <h1>Hi, I'm <span>Ramakrishna</span></h1>
+    <p>WordPress & Full Stack Developer</p>
+
+    <button onclick="scrollToSection('contact')">Hire Me</button>
+
+    <br><br>
+
+    <!-- Resume Download -->
+    <a href="resume.pdf" download>
+      <button>Download Resume</button>
+    </a>
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="container" data-aos="fade-up">
+  <h2>About Me</h2>
+  <p>
+    WordPress Developer with experience in custom themes, plugins, and responsive websites.
+    Skilled in PHP, JavaScript, MySQL, SEO, and performance optimization.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="container" data-aos="fade-up">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>PHP</span>
+    <span>MySQL</span>
+    <span>WordPress</span>
+    <span>SEO</span>
+    <span>Git</span>
+  </div>
+</section>
+
+<!-- EXPERIENCE (CLEAN CARD STYLE) -->
+<section id="experience" class="container" data-aos="fade-up">
+  <h2>Experience</h2>
+
+  <div class="project-card">
+    <h3>Full Stack Developer Intern</h3>
+    <span>Leap Robots | May 2024 – Nov 2024</span>
+    <ul style="margin-top:10px; text-align:left;">
+      <li>Developed responsive WordPress websites using custom themes</li>
+      <li>Improved performance by 25% and load speed by 40%</li>
+      <li>Worked with Agile methodology using Jira & GitHub</li>
+      <li>Integrated APIs and ensured cross-browser compatibility</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="container">
+  <h2>Projects</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card" data-aos="zoom-in">
+      <h3>RS Fashion</h3>
+      <p>eCommerce site using WordPress & WooCommerce.</p>
+    </div>
+
+    <div class="project-card" data-aos="zoom-in">
+      <h3>Product Filtering</h3>
+      <p>Dynamic filtering using PHP & MySQL.</p>
+    </div>
+
+    <div class="project-card" data-aos="zoom-in">
+      <h3>Social Distancing Detection</h3>
+      <p>AI-based detection system using OpenCV.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="container" data-aos="fade-up">
+  <h2>Contact</h2>
+  <p>Email: ramakrishnathota774@gmail.com</p>
+  <p>Phone: +91 9182894454</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Ramakrishna</p>
+</footer>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<!-- CUSTOM JS -->
+<script src="script.js"></script>
+
+</body>
+</html>

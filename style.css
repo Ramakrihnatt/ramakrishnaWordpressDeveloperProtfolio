@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+header {
+  background: #111;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+
+.hero-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4facfe;
+  box-shadow: 0 0 25px rgba(79, 172, 254, 0.5);
+  transition: 0.3s;
+}
+
+.hero-img img:hover {
+  transform: scale(1.05);
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text span {
+  color: #4facfe;
+}
+
+.hero button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  background: #4facfe;
+  color: white;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+/* SKILLS */
+.skills-grid span {
+  background: #eee;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;   /* smooth animation */
+  cursor: pointer;
+}
+
+/* HOVER EFFECT */
+.skills-grid span:hover {
+  background: #4facfe;         /* blue color */
+  color: white;
+  transform: scale(1.1);       /* pop-up effect */
+  box-shadow: 0 8px 20px rgba(79, 172, 254, 0.5);
+}
+
+.skills-grid span {
+  background: #eee;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* ===================== */
+/* EXPERIENCE TIMELINE */
+/* ===================== */
+
+.timeline {
+  position: relative;
+  margin: 50px auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background: #4facfe;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+}
+
+/* LEFT */
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+/* RIGHT */
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+/* CONTENT */
+.timeline-content {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* DOT */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: -8px;
+  width: 15px;
+  height: 15px;
+  background: #4facfe;
+  border-radius: 50%;
+}
+
+/* RIGHT DOT FIX */
+.timeline-item:nth-child(even)::before {
+  left: -8px;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* DARK MODE */
+.dark-btn {
+  margin-left: 15px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+body.dark .project-card,
+body.dark .timeline-content,
+body.dark .skills-grid span{
+  background: #1e1e1e;
+  color: white;
+}
+body.dark .skills-grid span:hover {
+ background: #4facfe;         /* blue color */
+  color: white;
+}
+ 
+
+body.dark header,
+body.dark footer {
+  background: black;
+}
+
+/* ===================== */
+/* MOBILE */
+/* ===================== */
+
+@media(max-width: 768px) {
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* FIX TIMELINE FOR MOBILE */
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 40px;
+    text-align: left !important;
+  }
+
+  .timeline-item::before {
+    left: 0;
+  }
+}
+
+/* TABLET */
+@media(min-width: 769px) and (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
