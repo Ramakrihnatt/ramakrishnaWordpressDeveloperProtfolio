@@ -19,6 +19,11 @@ body {
 header {
   background: #111;
   color: white;
+   position: fixed;   /* 👈 makes it stick */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;  
 }
 
 nav {
@@ -48,16 +53,16 @@ nav ul li a {
   cursor: pointer;
 }
 
-/* HERO */
-.hero {
+/* HERO */.hero {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   min-height: 100vh;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
+/* LEFT SIDE (PROFILE - 30%) */
 .hero-img {
+  flex: 0 0 40%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,11 +81,14 @@ nav ul li a {
 .hero-img img:hover {
   transform: scale(1.05);
 }
-
 .hero-text {
-  max-width: 500px;
+  flex: 0 0 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertical center */
+  align-items: center;       /* horizontal center inside area */
+  text-align: center;
 }
-
 .hero-text span {
   color: #4facfe;
 }
@@ -99,28 +107,28 @@ section {
   padding: 60px 0;
   text-align: center;
 }
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
 
-/* SKILLS */
 .skills-grid span {
   background: #eee;
-  padding: 12px;
-  border-radius: 8px;
-  transition: all 0.3s ease;   /* smooth animation */
+  padding: 10px 15px;
+  border-radius: 10px; /* pill shape */
+  font-size: 14px;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
 /* HOVER EFFECT */
 .skills-grid span:hover {
-  background: #4facfe;         /* blue color */
+  background: #4facfe;
   color: white;
-  transform: scale(1.1);       /* pop-up effect */
-  box-shadow: 0 8px 20px rgba(79, 172, 254, 0.5);
-}
-
-.skills-grid span {
-  background: #eee;
-  padding: 10px;
-  border-radius: 5px;
+  transform: scale(1.1);
 }
 
 /* PROJECTS */
