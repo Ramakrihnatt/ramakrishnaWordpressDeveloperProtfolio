@@ -265,9 +265,15 @@ body.dark footer {
     display: block;
   }
 
+  
   .hero {
     flex-direction: column;
-    text-align: center;
+     text-align: center;
+  }
+
+  .hero-img,
+  .hero-text {
+    flex: 100%;
   }
 
   .hero-img img {
